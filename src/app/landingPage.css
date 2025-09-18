@@ -159,8 +159,41 @@ nav {
 
 
 .beneficios {
-  display: flex;
-  margin: 50px 150px;
-  justify-content: space-around;
+    display: flex;
+    margin: 50px 150px;
+    justify-content: space-around;
 
+}
+
+.bonecas { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.cardBoneca {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+
+    width: 388px;
+    height: 539px;
+
+
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: -2px 5px 15px #7B7B7B;
+    border: 1px solid #7b7b7b83;
+
+    text-align: center;
+    line-height: normal;
+    
+
+    .valores{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
 }
