@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { beneficioComponente } from './shared/beneficios/beneficios.componente';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,beneficioComponente],
   templateUrl: './landingPage.html',
   styleUrl: './landingPage.css'
 })
