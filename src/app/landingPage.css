@@ -1,14 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 body {
     font-family: "Poppins", sans-serif;
-    background: #F5E6FF;
+    background: #f5e6ff91;
     width: 100%;
+    color: #3A3A3A
 }
 
 
@@ -137,7 +131,6 @@ nav {
     }
 
     p {
-        color: #3A3A3A;
         text-align: center;
         font-family: Montserrat;
         font-size: 18px;
@@ -160,40 +153,41 @@ nav {
 
 .beneficios {
     display: flex;
-    margin: 50px 150px;
+    margin: 100px;
     justify-content: space-around;
 
 }
 
-.bonecas { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-
-.cardBoneca {
+.bonecas {
     display: flex;
     flex-direction: column;
-    padding: 25px;
-
-    width: 388px;
-    height: 539px;
-
-
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: -2px 5px 15px #7B7B7B;
-    border: 1px solid #7b7b7b83;
-
-    text-align: center;
-    line-height: normal;
+    justify-content: center;
+    gap: 10px;
     
-
-    .valores{
-        display:flex;
-        justify-content: center;
+    .cardBonecas {
+        display: flex;
         align-items: center;
-        gap: 5px;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        padding: 10px 100px;
+        
     }
+
+    .linhaCinza {
+        align-self: center;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        width: 100px;
+        height: 4px;
+    }
+    
+    h2 {
+        text-align: center;
+        color: #E75480;
+        font-size: 36px;
+    }
+    
+    
 }
+
+    

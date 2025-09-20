@@ -1,0 +1,41 @@
+.cardBoneca {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+
+    width: 388px;
+    height: 539px;
+
+
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: -2px 5px 15px #F05381;
+    border: 1px solid #f053828a;
+
+    text-align: center;
+    line-height: normal;
+
+
+    .valores {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    span {
+        font-weight: 700;
+    }
+
+    button {
+        margin-top: 25px;
+        background-color: #F15281;
+        border: none;
+        padding: 15px;
+        border-radius: 16px;
+        font-family: "poppins";
+        font-size: 16px;
+        color: #FFF;
+    }
+
+}
