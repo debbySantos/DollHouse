@@ -1,0 +1,20 @@
+button {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #E75480 0%, #CCACE0 100%);
+}
+
+.medio {
+    
+    width: 380px;
+    height: 54.286px;
+}
+
+.pequeno {
+    width: 70px;
+    height: 47.286px;
+}

@@ -137,17 +137,6 @@ nav {
         font-weight: 400;
     }
 
-    button {
-        color: #FFF;
-        font-family: Montserrat;
-        font-size: 18px;
-        font-weight: 700;
-        width: 380px;
-        height: 54.286px;
-        border: none;
-        border-radius: 16px;
-        background: linear-gradient(90deg, #E75480 0%, #CCACE0 100%);
-    }
 }
 
 
@@ -190,4 +179,36 @@ nav {
     
 }
 
-    
+.novidades {
+    height: 130px;
+    background-color: #FADADD;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 100px;
+    align-items: center;
+
+
+    input {
+        height: 48px;
+        width: 336px;
+        border: none;
+        border-radius: 16px;
+        padding: 15px;
+
+    }
+
+    .inputs {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .inputComTexto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 25px;
+
+    }
+}
