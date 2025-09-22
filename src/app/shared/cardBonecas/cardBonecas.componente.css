@@ -1,4 +1,5 @@
 .cardBoneca {
+    font-family: "montserrat";
     display: flex;
     flex-direction: column;
     padding: 25px;

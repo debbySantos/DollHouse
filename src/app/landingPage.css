@@ -147,38 +147,46 @@ nav {
 
 }
 
-.bonecas, .lancamentos {
+.bonecas,
+.lancamentos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    
+
     .cardBonecas {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 25px;
         padding: 10px 100px;
-        
+
     }
 
-    .linhaRosa {
-        align-self: center;
-        background-color: #FFC3D3;
-        border-radius: 10px;
-        width: 100px;
-        height: 4px;
-    }
-    
+
     h2 {
         text-align: center;
         color: #E75480;
         font-size: 36px;
+        text-decoration: underline;
     }
-    
-      botaoDegrade{
+
+    botaoDegrade {
         align-self: center;
     }
+}
+
+.linhaRosa {
+    align-self: center;
+    background-color: #FFC3D3;
+    border-radius: 10px;
+    width: 100px;
+    height: 4px;
+}
+
+.grande {
+    width: 192px;
+    height: 23px;
 }
 
 .novidades {
@@ -190,6 +198,8 @@ nav {
     padding: 15px 100px;
     margin: 25px 0px;
     align-items: center;
+
+    font-family: "montserrat";
 
 
     input {
@@ -208,6 +218,7 @@ nav {
     }
 
     .inputComTexto {
+        gap: 4px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -222,9 +233,41 @@ nav {
     justify-content: space-around;
     margin: 30px;
 
-    img{
+    img {
         border-radius: 16px;
     }
 
-  
+
+}
+
+.sobre {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    align-items: center;
+
+
+    .textoSobre {
+        width: 619px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        h3 {
+            text-decoration: underline;
+            font-size: 64px;
+            color: #E75480
+        }
+    }
+
+    .linhaRosa {
+        align-self: start;
+    }
+
+    p {
+        font-family: "montserrat";
+        font-size: 20px;
+    }
+
+    .sobreposicaoImagem {}
 }
