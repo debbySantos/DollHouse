@@ -147,7 +147,7 @@ nav {
 
 }
 
-.bonecas {
+.bonecas, .lancamentos {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,9 +162,9 @@ nav {
         
     }
 
-    .linhaCinza {
+    .linhaRosa {
         align-self: center;
-        background-color: #D9D9D9;
+        background-color: #FFC3D3;
         border-radius: 10px;
         width: 100px;
         height: 4px;
@@ -176,7 +176,9 @@ nav {
         font-size: 36px;
     }
     
-    
+      botaoDegrade{
+        align-self: center;
+    }
 }
 
 .novidades {
@@ -186,6 +188,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 15px 100px;
+    margin: 25px 0px;
     align-items: center;
 
 
@@ -211,4 +214,17 @@ nav {
         margin-bottom: 25px;
 
     }
+}
+
+.lancamentosFuturos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+
+    img{
+        border-radius: 16px;
+    }
+
+  
 }
