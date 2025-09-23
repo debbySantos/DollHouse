@@ -1,0 +1,23 @@
+.dica {
+    display: flex;
+    border: #E75480 1px solid;
+    width: 580px;
+    max-height: 194px;
+    padding: 35px;
+    border-radius: 16px;
+    .textoDica {
+        font-family: "montserrat";
+        width: 249px;
+        span {
+            font-size: 20;
+            font-weight: bold;
+            color: #E75480;
+        }
+
+        p{
+            margin-top: 15px;
+        }
+      
+     align-self: center;
+    }
+}
