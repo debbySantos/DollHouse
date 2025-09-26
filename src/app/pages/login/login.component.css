@@ -1,0 +1,73 @@
+
+
+.doll-background {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.doll-box {
+    display: flex;
+    background-color: #FFC3D3;
+    width: 20%;
+    height: 45vh;
+    border-radius: 1vh;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.doll-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 30vh;
+    background-color: #ffffff35;
+    border-radius: 1vh;
+    gap: 1vh;
+    padding: 1.5vh;
+}
+
+.doll-content input {
+    width: 100%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 1vh;
+    padding: 1vh;
+}
+
+.doll-content button {
+    background-color: #F15281;
+    transition: all 0.5s;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 5vh;
+    border-radius: 1vh;
+    color: white;
+    cursor: pointer;
+}
+
+.doll-content button:hover {
+    background-color: #C63C68;
+}
+
+.doll-content h1 {
+    color: #F15382;
+}
+
+.doll-links {
+    display: flex;
+    gap: 1vh;
+}
+
+.doll-links a {
+    color: #F15382;
+}

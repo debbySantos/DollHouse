@@ -1,4 +1,4 @@
-body {
+main {
     font-family: "Poppins", sans-serif;
     background: #f5e6ff91;
     width: 100%;
@@ -104,7 +104,7 @@ nav {
 
 
 .banner {
-    margin-top: 25px;
+    /* margin-top: 25px; */
     background-image: url('/assets/images/background.svg');
     height: 500px;
     width: 100%;
@@ -142,7 +142,7 @@ nav {
 
 .beneficios {
     display: flex;
-    margin: 100px;
+    margin: 0px 100px;
     justify-content: space-around;
 
 }
@@ -196,7 +196,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 15px 100px;
-    margin: 25px 0px;
+    /* margin: 25px 0px; */
     align-items: center;
 
     font-family: "montserrat";
@@ -231,7 +231,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 30px;
+    /* margin: 30px; */
 
     img {
         border-radius: 16px;
@@ -287,5 +287,9 @@ h3 {
         justify-content: center;
     }
 
-    margin-top: 55px;
+    /* margin-top: 55px; */
+}
+
+section {
+    margin: 80px 0px;;
 }
