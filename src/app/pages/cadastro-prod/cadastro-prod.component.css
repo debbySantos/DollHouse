@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #FCEFF2;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #E6568C;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+.logo img{
+    width: 150px;
+
+}
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #E6568C;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px 40px;
+}
+
+.main-content header {
+    position: relative;
+}
+
+.main-content h1 {
+    font-size: 32px;
+    color: #E6568C;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-container-background {
+    background-color: #FADAE5;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-container {
+    background-color: #FFF0F5;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #E6568C;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #FADAE5;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    outline: 1px solid #E6568C;
+}
+
+.form-container textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.form-container button {
+    padding: 12px;
+    border: none;
+    background-color: #E6568C;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
