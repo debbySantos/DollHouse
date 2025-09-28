@@ -158,6 +158,7 @@ input:focus {
 
 /* --- Submit Button (Manter) --- */
 .submit-button {
+    width: 100%;
     background-color: #ff69b4;
     color: white;
     padding: 15px;
