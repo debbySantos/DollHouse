@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MenuLateralAdmComponent } from '../../shared/menu-lateral-adm/menu-lateral-adm.component';
 
+
 @Component({
-  selector: 'app-cadastro-prod',
+  selector: 'app-gerenciamento-estoque',
   standalone: true,
   imports: [RouterModule, MenuLateralAdmComponent],
-  templateUrl: './cadastro-prod.component.html',
-  styleUrl: './cadastro-prod.component.css'
+  templateUrl: './gerenciamento-estoque.component.html',
+  styleUrl: './gerenciamento-estoque.component.css'
 })
-export class CadastroProdComponent {
+export class GerenciamentoEstoqueComponent {
 
 }

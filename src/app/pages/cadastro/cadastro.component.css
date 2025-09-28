@@ -1,0 +1,180 @@
+.cadastro {
+    font-family: poppins;
+    background-color: #fce4ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+.logo {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff69b4;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(255, 192, 203, 0.5);
+    border: 3px solid #ffb6c1;
+    margin: 0 auto;
+}
+
+
+.card {
+    background-color: #ffe8f0;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 192, 203, 0.4);
+    margin-top: 0;
+}
+
+.card h2 {
+    text-align: center;
+    color: #ff69b4;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #ff69b4;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input {
+    padding-right: 40px;
+}
+
+.input-group .icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #ffc0cb;
+    pointer-events: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ffc0cb;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input::placeholder {
+    color: #ffc0cb;
+}
+
+input:focus {
+    border-color: #ff69b4;
+}
+
+
+/* --- Endereço Layout (Manter) --- */
+.address-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.address-field-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.address-field-group label {
+    font-size: 0.9rem;
+    color: #ff69b4;
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.address-field-group:not(:last-child)>label {
+    width: calc(50% - 5px);
+    text-align: left;
+}
+
+.input-row {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.address-field input {
+    padding: 10px 15px;
+}
+
+
+/* Definições de Largura Ajustadas */
+.half-width {
+    flex-basis: calc(50% - 5px);
+}
+
+.third-width {
+    flex-basis: 35%;
+}
+
+.two-thirds-width {
+    flex-basis: calc(65% - 5px);
+}
+
+.full-input-width {
+    flex-basis: 100%;
+}
+
+/* --- Submit Button (Manter) --- */
+.submit-button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 5px 10px rgba(255, 105, 180, 0.4);
+}
+
+.submit-button:hover {
+    background-color: #ff1493;
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}

@@ -1,0 +1,159 @@
+
+/* No seu arquivo style.css */
+
+/* --- Reset Básico e Configurações Globais --- */
+.containerP {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FEFBFB;
+    color: #333;
+    display: flex;
+    /* justify-content: center;  <<<<< REMOVA OU COMENTE ESSA LINHA */
+    align-items: flex-start;
+    min-height: 100vh;
+    /* padding: 25px;            <<<<< REMOVA OU COMENTE ESSA LINHA */
+}
+
+/* --- Container Principal --- */
+.container {
+    width: 100%; /* <<<<< MUDE PARA 100% */
+    display: flex;
+    height: 100vh;
+    max-width: 100%; /* <<<<< MUDE PARA 100% */
+    /* gap: 25px; << Mantenha o gap se quiser um espaço entre a sidebar e o conteúdo */
+}
+    
+/* --- Conteúdo Principal --- */
+.main-content {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+
+.main-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3C3C3C;
+    margin-bottom: 25px;
+}
+
+.actions {
+    display: flex;
+    align-items: center; /* Deixe só isso e o display:flex */
+    margin-bottom: 20px;
+    gap: 20px; /* Adicione um gap para garantir um espaço mínimo */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 10px 15px;
+    flex-grow: 0;  /* << Mude de 1 para 0 */
+    max-width: 400px; /* Mantenha isso para definir um limite */
+}
+
+.search-bar svg {
+    margin-right: 10px;
+    fill: #AAA;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-bar input::placeholder {
+    color: #AAA;
+}
+
+.add-new-btn {
+    background-color: #E85A71;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-new-btn:hover {
+    background-color: #d14f63;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    color: #777;
+    cursor: pointer;
+}
+
+/* --- Tabela de Estoque --- */
+.stock-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stock-table th, .stock-table td {
+    text-align: left;
+    padding: 20px 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.stock-table th:first-child, .stock-table td:first-child {
+    padding-left: 5px;
+}
+
+.stock-table thead th {
+    color: #9A9A9A;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.stock-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.stock-table tbody td {
+    color: #3C3C3C;
+    font-weight: 500;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 50px; /* Para formar a pílula */
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.status-badge.in-stock {
+    background-color: #DFF3E6;
+    color: #34A853;
+}

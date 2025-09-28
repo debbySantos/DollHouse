@@ -1,0 +1,93 @@
+<div class="containerP">
+
+    <div class="container">
+
+        <app-menu-lateral-adm></app-menu-lateral-adm>
+        <main class="main-content">
+            <h2>Gerenciamento de Estoque</h2>
+
+            <div class="actions">
+                <div class="search-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                    </svg>
+                    <input type="text" placeholder="Buscar por nome ou SKU">
+                </div>
+                <a routerLink="/cadastrarProduto">
+
+                    <button class="add-new-btn">+ Adicionar nova boneca</button>
+                </a>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn">Filtrar por categoria</button>
+                <button class="filter-btn">Filtrar por status</button>
+            </div>
+
+            <table class="stock-table">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nome</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://i.imgur.com/E8PEm7G.png" alt="Boneca Clara" class="avatar"></td>
+                        <td>Clara</td>
+                        <td>Edição Limitada</td>
+                        <td>R$ 350</td>
+                        <td><span class="status-badge in-stock">Em Estoque</span></td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://i.imgur.com/dAvLhMv.png" alt="Boneca Alice" class="avatar"></td>
+                        <td>Alice</td>
+                        <td>Lançamento</td>
+                        <td>R$ 200</td>
+                        <td><span class="status-badge in-stock">Em Estoque</span></td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://i.imgur.com/xT0sBNY.png" alt="Boneca Sophia" class="avatar"></td>
+                        <td>Sophia</td>
+                        <td>Clássica</td>
+                        <td>R$ 150</td>
+                        <td><span class="status-badge in-stock">Em Estoque</span></td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://i.imgur.com/vH3j2If.png" alt="Boneca Maria" class="avatar"></td>
+                        <td>Maria</td>
+                        <td>Clássica</td>
+                        <td>R$ 150</td>
+                        <td><span class="status-badge in-stock">Em Estoque</span></td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://i.imgur.com/6XzVpL1.png" alt="Boneca Ana" class="avatar"></td>
+                        <td>Ana</td>
+                        <td>Moderna</td>
+                        <td>R$ 180</td>
+                        <td><span class="status-badge in-stock">Em Estoque</span></td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://i.imgur.com/Uv6Q3io.png" alt="Boneca Laura" class="avatar"></td>
+                        <td>Laura</td>
+                        <td>Colecionável</td>
+                        <td>R$ 250</td>
+                        <td><span class="status-badge in-stock">Em Estoque</span></td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+    </div>
+</div>

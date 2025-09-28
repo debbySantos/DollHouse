@@ -1,73 +1,150 @@
 
 
-.doll-background {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
-
-.doll-box {
-    display: flex;
-    background-color: #FFC3D3;
-    width: 20%;
-    height: 45vh;
-    border-radius: 1vh;
-    align-items: center;
-    justify-content: center;
-    padding: 5vh;
+.login {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f1f9; /* Cor de fundo suave (lilás bem claro) */
+    display: flex; /* Para o header fixo e o conteúdo abaixo */
     flex-direction: column;
-    gap: 1vh;
+    min-height: 100vh;
 }
 
-.doll-content {
+/* --- Estilização do Cabeçalho --- */
+.main-header {
+    background-color: #e57398; /* Rosa escuro do topo */
+    padding: 15px 50px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 30vh;
-    background-color: #ffffff35;
-    border-radius: 1vh;
-    gap: 1vh;
-    padding: 1.5vh;
-}
-
-.doll-content input {
-    width: 100%;
-    height: 5vh;
-    border: none;
-    outline: none;
-    border-radius: 1vh;
-    padding: 1vh;
-}
-
-.doll-content button {
-    background-color: #F15281;
-    transition: all 0.5s;
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 5vh;
-    border-radius: 1vh;
     color: white;
-    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.doll-content button:hover {
-    background-color: #C63C68;
+.main-header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.doll-content h1 {
-    color: #F15382;
+/* Regra para a imagem da logo */
+.main-header .logo img {
+    height: 45px; /* Define a altura da sua logo. Ajuste este valor se precisar */
+    width: auto; /* Mantém a proporção da imagem */
+    display: block;
 }
 
-.doll-links {
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Estilização da Centralização e Caixa de Login --- */
+.container {
+    flex-grow: 1; /* Permite que o container ocupe o espaço restante */
     display: flex;
-    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; /* Adiciona algum padding para telas menores */
 }
 
-.doll-links a {
-    color: #F15382;
+.login-box {
+    background-color: #ffe6f0; /* Rosa mais claro (fundo da caixa) */
+    padding: 40px 50px;
+    border-radius: 20px;
+    
+    /* 🚀 ALTERAÇÃO SOLICITADA: Efeito NEON ROSA para contraste */
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.7), 
+                0 0 60px rgba(255, 105, 180, 0.3); 
+    
+    width: 100%;
+    max-width: 380px; /* Largura máxima da caixa */
+    text-align: center;
+}
+
+.logo-login {
+    font-size: 36px;
+    font-weight: 600;
+    color: #e57398; /* Rosa escuro */
+    margin-bottom: 20px;
+}
+
+.login-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #e57398; /* Rosa escuro */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f9d3e3; /* Linha sutil */
+}
+
+/* --- Estilização dos Campos de Input --- */
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+input::placeholder {
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+/* --- Estilização do Botão --- */
+.btn-entrar {
+    width: 100%;
+    padding: 12px;
+    background-color: #e57398; /* Rosa escuro do botão */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-entrar:hover {
+    background-color: #d16287; /* Rosa um pouco mais escuro ao passar o mouse */
+}
+
+/* --- Estilização dos Links de Ação --- */
+.extra-links {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os links */
+}
+
+.extra-links a {
+    color: #e57398; /* Rosa escuro para os links */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
 }

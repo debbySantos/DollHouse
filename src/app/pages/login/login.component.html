@@ -1,17 +1,36 @@
+<div class="login">
 
-    <div class="doll-background">
-        <div class="doll-box">
-            <img src="/DollHouse.png" alt="">
-            <div class="doll-content">
-                <h1>Login</h1>
-                <input type="text" placeholder="Nome de Usuário">
-                <input type="password" placeholder="Senha">
-                <button (click)="onBotaoClicado()">Entrar</button>
-                <div class="doll-links">
-                    <a href="">Criar conta</a>
-                    <a href="">Esqueci a senha</a>
+    <header class="main-header">
+        <div class="logo"><img src="assets/images/logo.svg" alt=""></div>
+        <nav>
+            <a href="#" class="home-link">Home</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="login-box">
+            <h1 class="logo-login"><img src="assets/images/logo.svg" alt=""></h1>
+            <h2 class="login-title">Login</h2>
+
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="Nome de Usuário">
                 </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Senha">
+                </div>
+
+                <a routerLink="/gerenciamentoEstoque">
+
+                    <button type="submit" class="btn-entrar">Entrar</button>
+                </a>
+            </form>
+
+            <div class="extra-links">
+                <a routerLink="/cadastro" class="link-criar-conta">Criar conta</a>
+                <span class="link-separator"></span>
+                <a href="#" class="link-esqueci-senha">Esqueci a senha</a>
             </div>
         </div>
     </div>
-
+</div>
