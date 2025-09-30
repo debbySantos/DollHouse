@@ -1,0 +1,114 @@
+*{
+  overflow: hidden;
+  font-family: 'Poppins', 'Montserrat';
+}
+
+
+.header{
+  background-color: #E75480;
+  padding: 1.375rem 1.75rem ;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header div{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.header p{
+  color: white;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2.5rem 1.25rem;
+}
+
+.produto{
+  display: flex;
+  justify-content: space-around;
+  padding: 1.875rem 2.5rem;
+  border: #E75480 1px solid;
+  border-radius: 0.625rem;
+}
+
+.produto div{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label{
+  display: flex;
+  justify-content: space-between;
+}
+
+.freteContent{
+ display: flex;
+ flex-direction: column;
+ gap: 0.5rem;
+ border: black 1px solid;
+ border-radius: 1rem;
+ padding: 1.25rem 2.5rem;
+}
+
+.freteContent h1, h3{
+  margin: 0;  
+}
+
+.freteContent div{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.label div{
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.finalizar{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+
+
+}
+
+.btnProd{
+  background-color: transparent;
+  border: none;
+}
+.input{
+  padding: 1rem;
+  border: #E75480 1px solid;
+  border-radius: 1rem;
+}
+
+.btn{
+  background-color: #E75480;
+  color: white;
+  border: none;
+  padding: 1rem 0rem;
+  border-radius: 1rem;
+  width: 16rem;
+}
+
+a{
+  color: #E75480;
+  text-decoration: none;
+}
+.finalizar p{
+  color: #E75480;
+}

@@ -1,0 +1,62 @@
+<div>
+  <!--Inicio do cabeçalho -->
+  <div class="header">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85"/></svg>
+      <p>Minhas Compras</p>
+    </div>
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"/></svg>
+    </div>
+  </div>
+  <!---Fim do cabeçalho -->
+  <!--Inicio do body -->
+  <div class="body">
+    <div class="produto">
+      <div>
+        <img src="assets/barbie1.jpg" alt="Produto" width="120" height="120">
+        <p><b>{{nomeProduto}}</b></p>
+      </div>
+      <div>
+        <input type="number" class="input" style="width: 3rem;">
+      </div>
+      <div>
+        <p><strong>R$ 255,00</strong></p>
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16m-10 4v6m4-6v6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>
+      </div>
+    </div>
+    <div class="container">
+      <div class="label">
+        <p><strong>Subtotal (sem frete):</strong></p> 
+        <p><strong>R$255,00</strong></p>
+      </div>
+      <div class="freteContent">
+        <p><strong>CALCULE O FRETE</strong></p>
+        <div >
+          <input type="text" placeholder="Digite seu CEP" class="input" style="width: 18rem;">
+          <button class="btn">Calcular</button> 
+        </div>
+        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">Não sei meu CEP</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="label">
+        <p><strong>Total</strong></p>
+        <div style="display: flex;flex-direction: column;align-items: end;">
+          <p><strong>R$255,00</strong></p>
+          <div class="finalizar">
+            <p><strong>Ou até 3x de R$ 85,00 sem juros</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="finalizar">
+        <button class="btn">Finalizar Compra </button>
+        <a href="">Ver Mais Produtos</a>
+      </div>
+    </div>
+
+  </div>
+  <!---Fim do body -->
+</div>

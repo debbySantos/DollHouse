@@ -1,0 +1,140 @@
+*{
+  overflow: hidden;
+  font-family: 'Poppins', 'Montserrat';
+}
+.input-btn-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header{
+  background-color: #E75480;
+  padding: 2.375rem 1.75rem ;
+  display: flex;
+  justify-content: space-between;
+}
+.body{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 4.5rem 8.25rem;
+  align-items: 20px;
+
+}
+.freteContent{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.25rem 2.5rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.freteContent h1, h3{
+  margin: 0;  
+}
+
+.freteContent div{
+  display: flex;
+  gap: 0.5rem;
+}
+input{
+  padding: 1rem;
+  border: #E75480 1px solid;
+  border-radius: 1rem;
+}
+.btn{
+  background-color: #E75480;
+  color: white;
+  border: none;
+  padding: 1rem 0rem;
+  border-radius: 1rem;
+  width: 16rem;
+}
+
+a{
+  color: #E75480;
+  text-decoration: none;
+}
+
+.produto-flex{
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.produto-detalhes{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.precoH2{
+  color: #E75480;
+}
+
+.icon{
+  color: #E75480;
+}
+
+.juros{
+  color: #E75480;
+}
+.produto-info h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.btn-comprar {
+  display: inline-block;
+  background: #e75480;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.frete {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 12px;
+}
+.frete input {
+  padding: 8px;
+  border: 1px solid #e75480;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.btn-calcular {
+  background: #e75480;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+div{
+  display: flex;
+}
+
+
+.container-produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center;
+  text-align: center;     
+  margin: 0 auto;         
+}
+
+.container-produto img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
