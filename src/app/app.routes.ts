@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CadastroProdComponent } from './pages/cadastro-prod/cadastro-prod.component';
 import { GerenciamentoEstoqueComponent } from './pages/gerenciamento-estoque/gerenciamento-estoque.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { PagInicialAdmComponent } from './pages/pagina-inicial-adm/pagina-inicial.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,10 @@ export const routes: Routes = [
         path: 'cadastro',
         component: CadastroComponent,
         title: 'Cadastro'
+    },
+    {
+        path: 'areaAdm',
+        component: PagInicialAdmComponent,
+        title: 'Pagina Inicial Adm'
     }
 ];

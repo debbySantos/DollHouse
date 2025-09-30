@@ -1,0 +1,115 @@
+<div class="body">
+
+    <div class="container">
+        <!-- MENU LATERAL -->
+
+        <app-menu-lateral-adm/>
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            <h1>Bem-vindo, administrador(a)!</h1>
+
+            <!-- CARDS -->
+            <div class="cards">
+                <div class="card">
+                    <span>❤️</span>
+                    <h2>42</h2>
+                    <p>Bonecas</p>
+                </div>
+                <div class="card">
+                    <span>🛒</span>
+                    <h2>7</h2>
+                    <p>Pedidos</p>
+                </div>
+                <div class="card">
+                    <span>💲</span>
+                    <h2>R$ 7.534</h2>
+                    <p>Receita</p>
+                </div>
+            </div>
+
+            <!-- TABELA -->
+            <section class="table-section">
+                <h3>Últimas vendas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Estoque</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://i.ibb.co/8b3CwFm/avatar1.png" alt="Anna"></td>
+                            <td>Anna</td>
+                            <td>Edição limitada</td>
+                            <td>R$ 250</td>
+                            <td>12</td>
+                            <td><span class="status ativa">Ativa</span></td>
+                            <td>
+                                <button class="edit">✏️</button>
+                                <button class="delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://i.ibb.co/9tX0fzd/avatar2.png" alt="Bella"></td>
+                            <td>Bella</td>
+                            <td>Lançamento</td>
+                            <td>R$ 150</td>
+                            <td>8</td>
+                            <td><span class="status inativa">Inativa</span></td>
+                            <td>
+                                <button class="edit">✏️</button>
+                                <button class="delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://i.ibb.co/NFb5R90/avatar3.png" alt="Clara"></td>
+                            <td>Clara</td>
+                            <td>Edição limitada</td>
+                            <td>R$ 300</td>
+                            <td>5</td>
+                            <td><span class="status ativa">Ativa</span></td>
+                            <td>
+                                <button class="edit">✏️</button>
+                                <button class="delete">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="modal" id="modalAdd">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2>Adicionar nova boneca</h2>
+                    <form id="formAdd">
+                        <label>Nome:</label>
+                        <input type="text" id="nome" required>
+
+                        <label>Categoria:</label>
+                        <input type="text" id="categoria" required>
+
+                        <label>Preço (R$):</label>
+                        <input type="number" id="preco" required>
+
+                        <label>Estoque:</label>
+                        <input type="number" id="estoque" required>
+
+                        <label>Status:</label>
+                        <select id="status">
+                            <option value="ativa">Ativa</option>
+                            <option value="inativa">Inativa</option>
+                        </select>
+
+                        <button type="submit" class="btn-add">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
