@@ -61,7 +61,7 @@
     border-radius: 20px;
     
     /* 🚀 ALTERAÇÃO SOLICITADA: Efeito NEON ROSA para contraste */
-    box-shadow: 0 0 30px rgba(255, 105, 180, 0.7), 
+    box-shadow: 0 0 30px rgba(252, 225, 239, 0.7), 
                 0 0 60px rgba(255, 105, 180, 0.3); 
     
     width: 100%;
