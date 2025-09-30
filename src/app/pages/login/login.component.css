@@ -1,11 +1,11 @@
-
-
+/* --- FUNDO DA PÁGINA --- */
 .login {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f1f9; /* Cor de fundo suave (lilás bem claro) */
-    display: flex; /* Para o header fixo e o conteúdo abaixo */
+    /* BACKGROUND DO CADASTRO: lilás/rosa pálido */
+    background: #f5e6ff91; 
+    display: flex; 
     flex-direction: column;
     min-height: 100vh;
 }
@@ -21,16 +21,9 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.main-header .logo {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-/* Regra para a imagem da logo */
 .main-header .logo img {
-    height: 45px; /* Define a altura da sua logo. Ajuste este valor se precisar */
-    width: auto; /* Mantém a proporção da imagem */
+    height: 45px;
+    width: auto;
     display: block;
 }
 
@@ -46,46 +39,64 @@
     text-decoration: underline;
 }
 
-/* --- Estilização da Centralização e Caixa de Login --- */
+/* --- CENTRALIZAÇÃO --- */
 .container {
-    flex-grow: 1; /* Permite que o container ocupe o espaço restante */
+    flex-grow: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px; /* Adiciona algum padding para telas menores */
+    padding: 40px; 
 }
 
-.login-box {
-    background-color: #ffe6f0; /* Rosa mais claro (fundo da caixa) */
-    padding: 40px 50px;
+/* --- 1. CARD EXTERNO (.card) --- */
+.card {
+    /* COR EXTERNA: Rosa claro (Padrão do Cadastro) */
+    background-color: #FADADD; 
+    
+    /* Configuração de tamanho e espaçamento */
+    width: 500px; /* Largura para o card externo */
+    padding: 70px; /* Espaço entre a borda externa e o login-box */
+    border-radius: 30px;
+    
+    /* Sombras e Borda do Cadastro */
+    box-shadow: 0 10px 30px rgba(243, 139, 139, 0.5);
+    border: 3px solid #f7bbc4; 
+    
+    /* Garante que o login-box fique centralizado dentro dele */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 90%;
+}
+
+/* --- 2. CAIXA DE LOGIN INTERNA (.login-box) --- */
+.login-box { 
+    /* COR INTERNA: Rosa mais forte (O que estava aparecendo na sua imagem) */
+    background-color: #fac1c7; 
+    
+    /* A largura é dada pelo card externo, mas definimos o máximo para o conteúdo */
+    width: 100%; /* Ocupa 100% da área de conteúdo do .card */
+    padding: 30px;
     border-radius: 20px;
-    
-    /* 🚀 ALTERAÇÃO SOLICITADA: Efeito NEON ROSA para contraste */
-    box-shadow: 0 0 30px rgba(252, 225, 239, 0.7), 
-                0 0 60px rgba(255, 105, 180, 0.3); 
-    
-    width: 100%;
-    max-width: 380px; /* Largura máxima da caixa */
+    box-shadow: 0 5px 15px rgba(255, 192, 203, 0.4); 
     text-align: center;
+    box-sizing: border-box;
 }
 
-.logo-login {
-    font-size: 36px;
-    font-weight: 600;
-    color: #e57398; /* Rosa escuro */
-    margin-bottom: 20px;
+/* Oculta logo interna (se você estiver usando uma no header) */
+.logo-login { 
+    display: none; 
 }
 
+/* --- TÍTULO E ELEMENTOS INTERNOS (Consistência com Cadastro) --- */
 .login-title {
-    font-size: 24px;
+    color: #E75480; 
+    margin-bottom: 25px;
+    font-size: 1.8rem;
     font-weight: 600;
-    color: #e57398; /* Rosa escuro */
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #f9d3e3; /* Linha sutil */
 }
 
-/* --- Estilização dos Campos de Input --- */
 .input-group {
     margin-bottom: 20px;
 }
@@ -94,52 +105,52 @@ input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 12px 15px;
-    border: none;
-    border-radius: 10px;
+    border: 2px solid #ffc0cb;
+    border-radius: 8px;
     background-color: white;
-    font-size: 16px;
+    font-size: 1rem;
     color: #333;
-    box-sizing: border-box; /* Inclui padding e border na largura total */
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-input::placeholder {
-    color: #a0a0a0;
-    font-weight: 400;
+input:focus {
+    border-color: #f88fc4;
 }
 
-/* --- Estilização do Botão --- */
+/* --- BOTÃO ENTRAR --- */
 .btn-entrar {
     width: 100%;
-    padding: 12px;
-    background-color: #e57398; /* Rosa escuro do botão */
+    background-color:#E75480; 
     color: white;
+    padding: 15px; 
     border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 600;
+    border-radius: 15px; 
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 5px 10px rgba(255, 105, 180, 0.4);
 }
 
 .btn-entrar:hover {
-    background-color: #d16287; /* Rosa um pouco mais escuro ao passar o mouse */
+    background-color: #fc3470;
 }
 
-/* --- Estilização dos Links de Ação --- */
+/* --- LINKS ADICIONAIS --- */
 .extra-links {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 0.9rem; 
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaço entre os links */
+    align-items: center;
+    gap: 10px;
 }
 
 .extra-links a {
-    color: #e57398; /* Rosa escuro para os links */
+    color: #E75480;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -147,4 +158,12 @@ input::placeholder {
 
 .extra-links a:hover {
     text-decoration: underline;
+}
+
+.link-separator {
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background-color: #E75480;
+    margin: 0 5px;
 }
