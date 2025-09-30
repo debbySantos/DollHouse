@@ -1,6 +1,6 @@
 .cadastro {
     font-family: poppins;
-    background-color: #fce4ec;
+    background: #f5e6ff91;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,19 +19,22 @@
 }
 
 .container {
-    width: 100%;
-    max-width: 500px;
-    padding: 30px;
-    background-color: #ffffff;
+    width: 1200px;  
+    padding: 50px;
+    background-color: #FADADD;
     border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(255, 192, 203, 0.5);
-    border: 3px solid #ffb6c1;
+    box-shadow: 0 10px 30px rgba(243, 139, 139, 0.5);
+    border: 3px solid #f7bbc4;
     margin: 0 auto;
+
 }
 
 
 .card {
-    background-color: #ffe8f0;
+    align-self: center;
+    justify-self: center;
+    width: 500px;
+    background-color: #fac1c7;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(255, 192, 203, 0.4);
@@ -40,7 +43,7 @@
 
 .card h2 {
     text-align: center;
-    color: #ff69b4;
+    color: #3a3a3a;
     margin-bottom: 25px;
     font-size: 1.8rem;
     font-weight: 600;
@@ -55,7 +58,7 @@ form {
 
 label {
     font-size: 0.9rem;
-    color: #ff69b4;
+    color: #3a3a3a;
     font-weight: 500;
     margin-bottom: -5px;
 }
@@ -74,7 +77,7 @@ label {
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
-    color: #ffc0cb;
+    color: #adadad;
     pointer-events: none;
 }
 
@@ -93,11 +96,11 @@ input[type="password"] {
 }
 
 input::placeholder {
-    color: #ffc0cb;
+    color: #c2c2c2;
 }
 
 input:focus {
-    border-color: #ff69b4;
+    border-color: #f88fc4;
 }
 
 
@@ -117,7 +120,7 @@ input:focus {
 
 .address-field-group label {
     font-size: 0.9rem;
-    color: #ff69b4;
+    color: #3a3a3a;
     font-weight: 500;
     margin-bottom: 0;
     line-height: 1;
@@ -139,7 +142,7 @@ input:focus {
 }
 
 
-/* Definições de Largura Ajustadas */
+
 .half-width {
     flex-basis: calc(50% - 5px);
 }
@@ -159,7 +162,7 @@ input:focus {
 /* --- Submit Button (Manter) --- */
 .submit-button {
     width: 100%;
-    background-color: #ff69b4;
+    background-color:#E75480;
     color: white;
     padding: 15px;
     border: none;
@@ -173,7 +176,7 @@ input:focus {
 }
 
 .submit-button:hover {
-    background-color: #ff1493;
+    background-color: #fc3470;
 }
 
 .submit-button:active {
