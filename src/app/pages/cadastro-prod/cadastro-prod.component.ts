@@ -9,6 +9,8 @@ import { MenuLateralAdmComponent } from '../../shared/menu-lateral-adm/menu-late
   templateUrl: './cadastro-prod.component.html',
   styleUrl: './cadastro-prod.component.css'
 })
+
+
 export class CadastroProdComponent {
 
 }

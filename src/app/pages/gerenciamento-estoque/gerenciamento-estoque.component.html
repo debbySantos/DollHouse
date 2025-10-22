@@ -37,54 +37,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img src="https://i.imgur.com/E8PEm7G.png" alt="Boneca Clara" class="avatar"></td>
-                        <td>Clara</td>
-                        <td>Edição Limitada</td>
-                        <td>R$ 350</td>
-                        <td><span class="status-badge in-stock">Em Estoque</span></td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/dAvLhMv.png" alt="Boneca Alice" class="avatar"></td>
-                        <td>Alice</td>
-                        <td>Lançamento</td>
-                        <td>R$ 200</td>
-                        <td><span class="status-badge in-stock">Em Estoque</span></td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/xT0sBNY.png" alt="Boneca Sophia" class="avatar"></td>
-                        <td>Sophia</td>
-                        <td>Clássica</td>
-                        <td>R$ 150</td>
-                        <td><span class="status-badge in-stock">Em Estoque</span></td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/vH3j2If.png" alt="Boneca Maria" class="avatar"></td>
-                        <td>Maria</td>
-                        <td>Clássica</td>
-                        <td>R$ 150</td>
-                        <td><span class="status-badge in-stock">Em Estoque</span></td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/6XzVpL1.png" alt="Boneca Ana" class="avatar"></td>
-                        <td>Ana</td>
-                        <td>Moderna</td>
-                        <td>R$ 180</td>
-                        <td><span class="status-badge in-stock">Em Estoque</span></td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://i.imgur.com/Uv6Q3io.png" alt="Boneca Laura" class="avatar"></td>
-                        <td>Laura</td>
-                        <td>Colecionável</td>
-                        <td>R$ 250</td>
-                        <td><span class="status-badge in-stock">Em Estoque</span></td>
-                        <td>5</td>
-                    </tr>
+                    @for(boneca of listaBonecas; track boneca){
+
+                        <tr>
+                            <td><img src={{boneca.foto}} alt="Boneca Clara" class="avatar"></td>
+                            <td>{{boneca.nome}}</td>
+                            <td>{{boneca.categoria}}</td>
+                            <td>{{boneca.preco}}</td>
+                            <td><span class="status-badge in-stock">{{boneca.estoque}}</span></td>
+                            <td>{{boneca.status}}</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
 
