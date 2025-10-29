@@ -157,3 +157,11 @@
     background-color: #DFF3E6;
     color: #34A853;
 }
+
+.edit, .delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 4px;
+}

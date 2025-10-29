@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MenuLateralAdmComponent } from '../../shared/menu-lateral-adm/menu-lateral-adm.component';
-import { Injectable } from '@angular/core';
 import { Bonecas } from '../../core/types/types';
 import { CadastroProdutoService } from '../../core/services/cadastro-produto.service';
 
-@Injectable({
-  providedIn: 'root'
-})
 
 @Component({
   selector: 'app-gerenciamento-estoque',
@@ -19,10 +15,22 @@ import { CadastroProdutoService } from '../../core/services/cadastro-produto.ser
 export class GerenciamentoEstoqueComponent implements OnInit {
 
   listaBonecas: Bonecas[] = [];
-  constructor(private service: CadastroProdutoService) { }
+  constructor(private service: CadastroProdutoService,
+    private router: Router
+  ) { }
+
   ngOnInit(): void {
-    this.listaBonecas = this.service.listar();
+    this.service.listar().subscribe((boneca) => {
+      this.listaBonecas = boneca;
+    });
   }
 
+  excluir(id:number){
+    if(id){
+      this.service.deletarBoneca(id).subscribe(() => {
+        window.location.reload() 
+      })
+    }
+  }
 }
 

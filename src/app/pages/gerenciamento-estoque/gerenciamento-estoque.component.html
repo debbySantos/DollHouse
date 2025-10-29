@@ -33,6 +33,7 @@
                         <th>Categoria</th>
                         <th>Preço</th>
                         <th>Estoque</th>
+                        <th>Quantidade</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -45,9 +46,15 @@
                             <td>{{boneca.categoria}}</td>
                             <td>{{boneca.preco}}</td>
                             <td><span class="status-badge in-stock">{{boneca.estoque}}</span></td>
+                            <td>{{boneca.quantidade}}</td>
                             <td>{{boneca.status}}</td>
+                            <td>
+                                  <button class="edit" [routerLink] = "['alterar', boneca.id]">✏️</button>
+                                  <button class="delete" (click)=excluir(boneca.id!)>🗑️</button>
+                              </td>
                         </tr>
                     }
+
                 </tbody>
             </table>
 
