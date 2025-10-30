@@ -5,6 +5,7 @@ export interface Bonecas{
     categoria: string,
     preco: number,
     estoque: boolean,
-    quantidade:number
-    status: number
+    quantidade:number,
+    status: number,
+    descricao: string
 }

@@ -41,5 +41,10 @@ export const routes: Routes = [
         path: 'areaAdm',
         component: PagInicialAdmComponent,
         title: 'Pagina Inicial Adm'
+    },
+    {
+        path: 'gerenciamentoEstoque/alterar/:id',
+        component: CadastroProdComponent,
+        title: 'alterarBoneca'
     }
 ];

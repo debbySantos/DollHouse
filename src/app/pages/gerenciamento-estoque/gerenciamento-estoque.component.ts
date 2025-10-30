@@ -3,12 +3,14 @@ import { Router, RouterModule } from '@angular/router';
 import { MenuLateralAdmComponent } from '../../shared/menu-lateral-adm/menu-lateral-adm.component';
 import { Bonecas } from '../../core/types/types';
 import { CadastroProdutoService } from '../../core/services/cadastro-produto.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-gerenciamento-estoque',
   standalone: true,
-  imports: [RouterModule, MenuLateralAdmComponent],
+  imports: [RouterModule, MenuLateralAdmComponent, CommonModule, FormsModule],
   templateUrl: './gerenciamento-estoque.component.html',
   styleUrl: './gerenciamento-estoque.component.css'
 })

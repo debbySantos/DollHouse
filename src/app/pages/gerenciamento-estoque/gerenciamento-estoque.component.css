@@ -9,7 +9,7 @@
     display: flex;
     /* justify-content: center;  <<<<< REMOVA OU COMENTE ESSA LINHA */
     align-items: flex-start;
-    min-height: 100vh;
+    height: 100vh;
     /* padding: 25px;            <<<<< REMOVA OU COMENTE ESSA LINHA */
 }
 
@@ -157,6 +157,14 @@
     background-color: #DFF3E6;
     color: #34A853;
 }
+
+
+.out-of-stock {
+    background-color: #DFF3E6;
+      color: #c0392b;
+}
+
+
 
 .edit, .delete {
   background: none;
