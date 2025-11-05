@@ -1,0 +1,23 @@
+<div class="forgot-password-container">
+  <div class="forgot-password-box">
+    <h2>Recuperar Senha</h2>
+    <p>Digite o e-mail cadastrado para receber o link de redefinição.</p>
+
+    <form (submit)="enviarEmail()">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Digite seu e-mail"
+        required
+      />
+      <button type="submit" class="btn-recuperar">Enviar link</button>
+    </form>
+
+    <div class="link-voltar">
+      <a (click)="voltarLogin()">Voltar ao login</a>
+    </div>
+
+    <p *ngIf="mensagem" class="mensagem">{{ mensagem }}</p>
+  </div>
+</div>
