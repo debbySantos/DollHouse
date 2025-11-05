@@ -46,5 +46,6 @@ export const routes: Routes = [
         path: 'gerenciamentoEstoque/alterar/:id',
         component: CadastroProdComponent,
         title: 'alterarBoneca'
-    }
+    },
+    
 ];
