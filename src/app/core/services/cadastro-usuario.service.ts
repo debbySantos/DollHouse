@@ -11,5 +11,24 @@ export class CadastroUsuarioService {
 
     constructor(private http: HttpClient){}
 
+      listar(): Observable<Usuarios[]>{
+        return this.http.get<Usuarios[]>(this.API)
+      }
+    
+      buscarUserId(id:number): Observable<Usuarios | undefined>{
+        return this.http.get<Usuarios>(this.API + `/${id}`)
+      }
+    
+      addUser(boneca: Usuarios):Observable<Usuarios>{
+        return this.http.post<Usuarios>(this.API, boneca)
+      }
+    
+      alterarUser(boneca: Usuarios):Observable<Usuarios>{
+        const url = `${this.API}/${boneca.id}`
+        return this.http.put<Usuarios>(url, boneca)
+      }
+      deletarUser(id:number): Observable<Usuarios>{
+        return this.http.delete<Usuarios>(this.API + `/${id}`)
+      }
     
 }
