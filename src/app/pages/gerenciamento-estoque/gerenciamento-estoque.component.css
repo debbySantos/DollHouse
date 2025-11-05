@@ -159,8 +159,8 @@
 }
 
 
-.out-of-stock {
-    background-color: #DFF3E6;
+.status-badge.out-of-stock {
+    background-color: #f3dfdf;
       color: #c0392b;
 }
 
