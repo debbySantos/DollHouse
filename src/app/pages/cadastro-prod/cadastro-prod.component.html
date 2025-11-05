@@ -23,8 +23,8 @@
                
                     <label for="estoque">Em estoque</label>
                     <select id="estoque" name="estoque" [(ngModel)]="boneca.estoque">
-                        <option value="true" selected>Disponivel em estoque</option >
-                        <option value="false" selected>Sem Estoque</option>
+                        <option [ngValue] = "true" selected>Disponivel em estoque</option >
+                        <option [ngValue] = "false" selected>Sem Estoque</option>
                     </select >
                 
 
@@ -33,8 +33,8 @@
                     
                     <label for="status">Status</label>
                     <select id="status" name="status" [(ngModel)]="boneca.status">
-                        <option value="ativa" selected>Ativa</option>
-                        <option value="sem estoque" selected>Fora de venda</option>
+                        <option value="Ativa" selected>Ativa</option>
+                        <option value="Fora de venda" selected>Fora de venda</option>
                     </select>
 
                     <label for="imagem">Foto boneca</label>

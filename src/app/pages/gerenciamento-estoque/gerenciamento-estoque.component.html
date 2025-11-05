@@ -45,7 +45,7 @@
                             <td>{{boneca.nome}}</td>
                             <td>{{boneca.categoria}}</td>
                             <td>{{boneca.preco}}</td>
-                            <td><span class="status-badge" [ngClass]="{'in-stock': boneca.estoque === true, 'out-of-stock': boneca.estoque === false}">{{boneca.estoque}}</span></td>
+                            <td><span class="status-badge" [ngClass]="{'in-stock': boneca.estoque === true, 'out-of-stock': boneca.estoque === false}">{{boneca.estoque ? "Disponível" : "Esgotada"}}</span></td>
                             <td>{{boneca.quantidade}}</td>
                             <td>{{boneca.status}}</td>
                             <td>
