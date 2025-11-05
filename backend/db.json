@@ -1,3 +1,21 @@
 {
-  "bonecas": []
+  "bonecas": [],
+
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "teste",
+      "email": "email@gmail.com",
+      "telefone": "(11)93278-4626",
+      "senha": "senha",
+      "cep": "04864-040",
+      "logradouro": "rua mendes",
+      "numero": "289A",
+      "complemento": "",
+      "bairro": "são josé",
+      "cidade": "sp",
+      "estado": "são paulo"
+    }
+  ]
+
 }
