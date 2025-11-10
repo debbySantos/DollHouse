@@ -5,6 +5,7 @@ import { CadastroProdComponent } from './pages/cadastro-prod/cadastro-prod.compo
 import { GerenciamentoEstoqueComponent } from './pages/gerenciamento-estoque/gerenciamento-estoque.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PagInicialAdmComponent } from './pages/pagina-inicial-adm/pagina-inicial.component';
+import { EsqueciMinhaSenhaComponent } from './pages/login/EsqueciMinhaSenha.component';
 
 export const routes: Routes = [
     {
@@ -46,6 +47,12 @@ export const routes: Routes = [
         path: 'gerenciamentoEstoque/alterar/:id',
         component: CadastroProdComponent,
         title: 'alterarBoneca'
+    },
+    {
+        path: 'esqueci-senha', 
+        component: EsqueciMinhaSenhaComponent, 
+        title: 'Esqueci minha senha' 
+
     },
     
 ];

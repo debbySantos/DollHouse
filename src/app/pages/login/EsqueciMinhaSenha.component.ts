@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // 👈 necessário pro ngModel
+import { Router } from '@angular/router'; // 👈 import para navegação
 
 @Component({
   selector: 'app-esqueci-minha-senha',
@@ -12,6 +13,8 @@ import { FormsModule } from '@angular/forms'; // 👈 necessário pro ngModel
 export class EsqueciMinhaSenhaComponent {
   email: string = '';
   mensagem: string = '';
+
+  constructor(private router: Router) {} // 👈 injeta o Router
 
   enviarEmail() {
     if (!this.email) {
@@ -25,7 +28,6 @@ export class EsqueciMinhaSenhaComponent {
   }
 
   voltarLogin() {
-    // Aqui você pode navegar de volta para a tela de login
-    console.log('Voltando para o login...');
+    this.router.navigate(['/login']); // 👈 redireciona para a rota do login
   }
 }
