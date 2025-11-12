@@ -312,8 +312,126 @@ h3 {
     }
 
 }
+.depoimentos {
+    /* Mantenha outros estilos, se houver /* Tente remover qualquer padding inferior excessivo */
+/* Remove a margem inferior (espaço externo) */
+    background-color: #ffd6eb;
+    padding-bottom: 50px;
+}
 
 section {
     margin: 80px 0px;
-    ;
+    
+    
+}
+/* ====== FOOTER STYLE ====== */
+.footer {
+  background: linear-gradient(180deg, #ffd6eb 0%, #ffb6e1 100%);
+  
+  padding: 60px 0 25px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.footer h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.footer h3 .brand {
+  border-bottom: 3px solid white;
+}
+
+.footer h4 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-about p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffe6f7;
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a svg {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icons a:hover svg {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.footer-newsletter input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  outline: none;
+  color: #555;
+}
+
+.footer-newsletter button {
+  background: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #ff3385;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #fff;
 }
