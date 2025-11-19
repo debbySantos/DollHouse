@@ -1,53 +1,108 @@
 <div class="container">
-    <app-menu-lateral-adm></app-menu-lateral-adm>
-    <main class="main-content">
-        <header>
-            <h1>Gerenciamento de Estoque</h1>
-        </header>
-        <div class="form-container-background">
-            <div class="form-container">
-                <h2>Cadastro de Boneca</h2>
-                <form>
-                    <label for="id">Id</label>
-                    <input type="text" id="id" placeholder="1" name="id" [(ngModel)]="boneca.id" hidden>
+  <app-menu-lateral-adm></app-menu-lateral-adm>
+  <main class="main-content">
+    <header>
+      <h1>Gerenciamento de Estoque</h1>
+    </header>
+    <div class="form-container-background">
+      <div class="form-container">
+        <h2>Cadastro de Boneca</h2>
 
-                    <label for="nome">Nome do item/Modelo</label>
-                    <input type="text" id="nome" placeholder="Barbies Sereias" name="nome" [(ngModel)]="boneca.nome">
+        <form [formGroup]="formulario" (ngSubmit)="submeter()">
 
-                    <label for="categoria">Categoria</label>
-                    <input type="text" id="categoria" placeholder="Kit Mini Coleção" name="categoria" [(ngModel)]="boneca.categoria">
+          <label for="nome">Nome do item/Modelo</label>
+          <input type="text" id="nome" placeholder="Barbies Sereias" formControlName="nome">
 
-                    <label for="preco">Preço</label>
-                    <input type="text" id="preco" placeholder="R$ 60,00" name="preco" [(ngModel)]="boneca.preco">
+          <div
+            *ngIf="formulario.get('nome')?.invalid && (formulario.get('nome')?.touched || formulario.get('nome')?.dirty)"
+            class="erro">
+            <span *ngIf="formulario.get('nome')?.hasError('required')">Nome é obrigatório.</span>
+            <span *ngIf="formulario.get('nome')?.hasError('minlength')">Nome precisa ter no mínimo 3 caracteres.</span>
+          </div>
 
+          <label for="categoria">Categoria</label>
+          <input type="text" id="categoria" placeholder="Kit Mini Coleção" formControlName="categoria">
 
-                    <label for="estoque">Em estoque</label>
-                    <select id="estoque" name="estoque" [(ngModel)]="boneca.estoque">
-                        <option [ngValue] = "true" selected>Disponivel em estoque</option >
-                        <option [ngValue] = "false" selected>Sem Estoque</option>
-                    </select >
+          <div *ngIf="formulario.get('categoria')?.invalid && (formulario.get('categoria')?.touched)" class="erro">
+            <span *ngIf="formulario.get('categoria')?.hasError('required')">Categoria é obrigatória.</span>
+          </div>
 
+          <label for="preco">Preço</label>
+          <input type="number" id="preco" placeholder="R$ 60,00" formControlName="preco">
 
-                    <label for="quantidade">Quantidade</label>
-                    <input type="text" id="quantidade" placeholder="100" name="quantidade" [(ngModel)]="boneca.quantidade">
+          <div *ngIf="formulario.get('preco')?.invalid && (formulario.get('preco')?.touched)" class="erro">
+            <span *ngIf="formulario.get('preco')?.hasError('required')">Preço é obrigatório.</span>
+            <span *ngIf="formulario.get('preco')?.hasError('min')">Preço deve ser maior que zero.</span>
+          </div>
 
-                    <label for="status">Status</label>
-                    <select id="status" name="status" [(ngModel)]="boneca.status">
-                        <option value="Ativa" selected>Ativa</option>
-                        <option value="Fora de venda" selected>Fora de venda</option>
-                    </select>
+          <label for="estoque">Em estoque</label>
+          <select id="estoque" formControlName="estoque">
+            <option [ngValue]="null" disabled>Selecione...</option>
+            <option [ngValue]="true">Disponível em estoque</option>
+            <option [ngValue]="false">Sem Estoque</option>
+          </select>
 
-                    <label for="imagem">Foto boneca</label>
-                    <input type="file" id="imagem" placeholder="100" name="img" (change)="onFileSelected($event)"/>
+          <div *ngIf="formulario.get('estoque')?.invalid && (formulario.get('estoque')?.touched)" class="erro">
+            <span *ngIf="formulario.get('estoque')?.hasError('required')">Status de estoque é obrigatório.</span>
+          </div>
 
-                    <label for="descricao">Descrição</label>
-                    <textarea id="descricao" placeholder="Sobre o produto..." name="descricao" [(ngModel)]="boneca.descricao"></textarea>
+          <label for="quantidade">Quantidade</label>
+          <input type="number" id="quantidade" placeholder="100" formControlName="quantidade">
 
-                    <a routerLink="/gerenciamentoEstoque">
-                        <button (click)="submeter()">Cadastrar Boneca</button>
-                    </a>
-                </form>
-            </div>
-        </div>
-    </main>
+          <div *ngIf="formulario.get('quantidade')?.invalid && (formulario.get('quantidade')?.touched)" class="erro">
+            <span *ngIf="formulario.get('quantidade')?.hasError('required')">
+              Quantidade é obrigatória.
+            </span>
+            <span *ngIf="formulario.get('quantidade')?.hasError('min')">
+              A quantidade não pode ser negativa (mínimo 0).
+            </span>
+          </div>
+
+          <div *ngIf="formulario.get('quantidade')?.invalid && (formulario.get('quantidade')?.touched)" class="erro">
+            <span *ngIf="formulario.get('quantidade')?.hasError('required')">Quantidade é obrigatória.</span>
+            <span *ngIf="formulario.get('quantidade')?.hasError('min')">Quantidade não pode ser negativa.</span>
+          </div>
+
+          <label for="status">Status</label>
+          <select id="status" formControlName="status">
+            <option [ngValue]="null" disabled>Selecione...</option>
+            <option value="Ativa">Ativa</option>
+            <option value="Fora de venda">Fora de venda</option>
+          </select>
+
+          <div *ngIf="formulario.get('status')?.invalid && (formulario.get('status')?.touched)" class="erro">
+            <span *ngIf="formulario.get('status')?.hasError('required')">Status é obrigatório.</span>
+          </div>
+
+          <label for="imagem">Foto boneca</label>
+
+          <input type="file" id="imagem" (change)="onFileSelected($event)" accept="image/*" />
+
+          <div *ngIf="formulario.get('foto')?.value" style="margin-top: 10px;">
+            <img [src]="formulario.get('foto')?.value" width="100" style="border-radius: 4px; border: 1px solid #ccc;">
+          </div>
+
+          <div *ngIf="formulario.get('foto')?.invalid && (formulario.get('foto')?.touched)" class="erro">
+            <span *ngIf="formulario.get('foto')?.hasError('required')">
+              A imagem do produto é obrigatória!
+            </span>
+          </div>
+
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" placeholder="Sobre o produto..." formControlName="descricao"></textarea>
+
+          <div *ngIf="formulario.get('descricao')?.invalid && (formulario.get('descricao')?.touched)" class="erro">
+            <span *ngIf="formulario.get('descricao')?.hasError('required')">Descrição é obrigatória.</span>
+            <span *ngIf="formulario.get('descricao')?.hasError('maxlength')">Descrição não pode passar de 200
+              caracteres.</span>
+          </div>
+
+          <button type="submit" class="btn-salvar">
+            {{ bonecaId ? 'Atualizar Boneca' : 'Cadastrar Boneca' }}
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </main>
 </div>
