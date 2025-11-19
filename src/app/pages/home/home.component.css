@@ -317,3 +317,98 @@ section {
     margin: 80px 0px;
     ;
 }
+
+/* --- ESTILO DO RODAPÉ (FOOTER) --- */
+footer {
+    background-color: #FFF0F5; /* Um rosa bem clarinho (LavenderBlush) */
+    padding: 60px 20px 20px;
+    border-top: 4px solid #E75480;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 80px; /* Espaço para separar do conteúdo principal */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Espalha as colunas */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1; /* Cada coluna tenta ocupar o mesmo espaço */
+    min-width: 250px; /* Tamanho mínimo antes de quebrar linha */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo-footer {
+    width: 150px; /* Ajuste conforme o tamanho da sua logo */
+}
+
+.footer-col h4 {
+    color: #E75480;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #E75480;
+    padding-left: 5px; /* Efeitinho de deslizar ao passar o mouse */
+}
+
+.redes-sociais, .pagamentos {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-sociais i {
+    font-size: 24px;
+    color: #E75480;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.redes-sociais i:hover {
+    transform: translateY(-3px); /* Pula para cima ao passar o mouse */
+}
+
+.pagamentos i {
+    font-size: 28px;
+    color: #888;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #ffc3d3;
+    font-size: 12px;
+    color: #777;
+}
+

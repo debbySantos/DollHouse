@@ -1,6 +1,7 @@
 {
-  "bonecas": [],
+  "bonecas": [
 
+  ],
   "usuarios": [
     {
       "id": "1",
@@ -17,5 +18,4 @@
       "estado": "são paulo"
     }
   ]
-
 }
