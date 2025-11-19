@@ -1,10 +1,11 @@
 import { Component, Input } from "@angular/core";
-import { NgClass } from "@angular/common";
+import { CommonModule, NgClass } from "@angular/common";
+import { Bonecas } from "../../core/types/types";
 
 @Component({
     selector: 'bonecaCard',
     standalone: true,
-    imports: [NgClass],
+    imports: [CommonModule],
     templateUrl: './cardBonecas.componente.html',
     styleUrl: './cardBonecas.componente.css'
 })
@@ -12,5 +13,7 @@ import { NgClass } from "@angular/common";
 export class bonecaCardComponente {
     @Input() imgBoneca: string = "assets/images/boneca1.svg";
     @Input() titulo: string = "Barbie Piquenique";
+
+    @Input() dados!: Bonecas;
 
 }

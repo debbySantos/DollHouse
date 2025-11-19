@@ -1,195 +1,181 @@
 <main>
+  <app-header></app-header>
 
-    <header>
-
-        <div class="inputPesquisa">
-            <input type="text" placeholder="O que você procura?">
-            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-        </div>
-
-
-
-        <img class="logo" src="assets/images/logo.svg" alt="logo">
-
-
-
-        <div class="itensLogin">
-            <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-            <a routerLink="/cadastro">Cadastre-se</a>
-            <a routerLink="/login" href="">Fazer login</a>
-
-
-            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-        </div>
-
-    </header>
-
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#lancamentos">Lançamentos</a>
-        <a href="#bonecas">Bonecas</a>
-    </nav>
-
-    <section id="inicio">
+  <section id="inicio">
     <section class="banner">
-        <h1>Bem-Vindo(a) ao Mundo Barbie</h1>
-        <p>Sua boneca dos sonhos você encontra aqui</p>
-        <botaoDegrade></botaoDegrade>
-    </section></section>
-
-    <section class="beneficios">
-        <beneficio></beneficio>
-        <beneficio classeIcone="fa-solid fa-percent" titulo="Cupom"
-            subTitulo="Use “DOLLSY” na primeira compra e ganhe 10% de desconto"></beneficio>
-        <beneficio classeIcone="fa-brands fa-instagram" titulo="Atendimento" subTitulo="Em caso de dúvidas, entre em 
-contato via Instagram."></beneficio>
-        <beneficio classeIcone="fa-solid fa-rotate" titulo="Trocas e devoluções"
-            subTitulo="Para trocas e devoluções entre em contato via e-mail!"></beneficio>
-
+      <h1>Bem-Vindo(a) ao Mundo Barbie</h1>
+      <p>Sua boneca dos sonhos você encontra aqui</p>
+      <botaoDegrade></botaoDegrade>
     </section>
+  </section>
 
-    <section id="bonecas">
+  <section class="beneficios">
+    <beneficio></beneficio>
+    <beneficio
+      classeIcone="fa-solid fa-percent"
+      titulo="Cupom"
+      subTitulo="Use “DOLLSY” na primeira compra e ganhe 10% de desconto"
+    ></beneficio>
+    <beneficio
+      classeIcone="fa-brands fa-instagram"
+      titulo="Atendimento"
+      subTitulo="Em caso de dúvidas, entre em
+contato via Instagram."
+    ></beneficio>
+    <beneficio
+      classeIcone="fa-solid fa-rotate"
+      titulo="Trocas e devoluções"
+      subTitulo="Para trocas e devoluções entre em contato via e-mail!"
+    ></beneficio>
+  </section>
+
+  <section id="bonecas">
     <section class="bonecas">
-        <h2>As Mais Vendidas!</h2>
-        <div class="linhaRosa">
-        </div>
-        <div class="cardBonecas">
-            <bonecaCard></bonecaCard>
-            <bonecaCard></bonecaCard>
-            <bonecaCard></bonecaCard>
-            <bonecaCard></bonecaCard>
-        </div>
+      <h2>As Mais Vendidas!</h2>
+      <div class="linhaRosa"></div>
+      <div class="cardBonecas">
+        <bonecaCard></bonecaCard>
+        <bonecaCard></bonecaCard>
+        <bonecaCard></bonecaCard>
+        <bonecaCard></bonecaCard>
+      </div>
+    </section>
+  </section>
 
-    </section></section>
-
-    <section id="lancamentos">
+  <section id="lancamentos">
     <section class="lancamentos">
-        <h2>Lançamentos</h2>
-        <div class="linhaRosa">
-        </div>
-        <div class="cardBonecas">
-            <bonecaCard></bonecaCard>
-            <bonecaCard></bonecaCard>
-            <bonecaCard></bonecaCard>
-            <bonecaCard></bonecaCard>
-        </div>
+      <h2>Lançamentos</h2>
+      <div class="linhaRosa"></div>
+      <div class="cardBonecas">
+        <bonecaCard></bonecaCard>
+        <bonecaCard></bonecaCard>
+        <bonecaCard></bonecaCard>
+        <bonecaCard></bonecaCard>
+      </div>
 
-        <botaoDegrade textoBotao="Ver Todos os Produtos"></botaoDegrade>
-
-    </section></section>
-
-    <section class="lancamentosFuturos">
-        <img src="assets/images/bannerPt1.svg" alt="">
-        <img src="assets/images/bannerPt2.svg" alt="">
-
+      <botaoDegrade
+        textoBotao="Ver Todos os Produtos"
+        routerLink="todosOsProdutos"
+      ></botaoDegrade>
+<a routerLink="todosOsProdutos">aaaa</a>
     </section>
+  </section>
 
-    <section class="novidades">
-        <img src="assets/images/logo.svg" alt="">
-        <div class="inputs">
+  <section class="lancamentosFuturos">
+    <img src="assets/images/bannerPt1.svg" alt="" />
+    <img src="assets/images/bannerPt2.svg" alt="" />
+  </section>
 
-            <div class="inputComTexto">
-                <span>Receba nossas novidades!</span>
-                <input type="text" placeholder="Nome Completo">
-            </div>
-            <input type="email" placeholder="E-mail">
-            <botaoDegrade tamanho="pequeno" textoBotao="Ok"></botaoDegrade>
-        </div>
-    </section>
+  <section class="novidades">
+    <img src="assets/images/logo.svg" alt="" />
+    <div class="inputs">
+      <div class="inputComTexto">
+        <span>Receba nossas novidades!</span>
+        <input type="text" placeholder="Nome Completo" />
+      </div>
+      <input type="email" placeholder="E-mail" />
+      <botaoDegrade tamanho="pequeno" textoBotao="Ok"></botaoDegrade>
+    </div>
+  </section>
 
-    <section id="sobre">
+  <section id="sobre">
     <section class="sobre">
-        <div class="textoSobre">
-
-            <h3>Doll House: entre e sinta-se em casa</h3>
-            <div class="linhaRosa grande">
-            </div>
-
-            <p>A Dollhouse é o lugar onde a imaginação nunca cresce demais! Aqui, cada boneca é uma nova história, cada
-                acessório é uma dose de magia, e cada coleção é um pedacinho do seu mundo encantado. Criamos um espaço
-                para quem ama brincar, sonhar e colecionar. Entre novidades, edições limitadas e acessórios fofíssimos,
-                a Dollhouse é a sua casinha dos sonhos — feita para amar, colecionar e exibir com muito estilo e
-                diversão. </p>
-            <botaoDegrade textoBotao="VER PRODUTOS"></botaoDegrade>
-        </div>
-
-        <div class="sobreposicaoImagem">
-            <img src="assets/images/barbieCasa.svg" alt="">
-        </div>
-    </section></section>
-
-
-
-    <section class="cuidados">
-        <h3>Como cuidar?</h3>
+      <div class="textoSobre">
+        <h3>Doll House: entre e sinta-se em casa</h3>
         <div class="linhaRosa grande"></div>
-        <div class="dicas">
-            <dica></dica>
-            <dica></dica>
-            <dica></dica>
-            <dica></dica>
-            <dica></dica>
-            <dica></dica>
 
-        </div>
+        <p>
+          A Dollhouse é o lugar onde a imaginação nunca cresce demais! Aqui,
+          cada boneca é uma nova história, cada acessório é uma dose de magia, e
+          cada coleção é um pedacinho do seu mundo encantado. Criamos um espaço
+          para quem ama brincar, sonhar e colecionar. Entre novidades, edições
+          limitadas e acessórios fofíssimos, a Dollhouse é a sua casinha dos
+          sonhos — feita para amar, colecionar e exibir com muito estilo e
+          diversão.
+        </p>
+        <botaoDegrade textoBotao="VER PRODUTOS"></botaoDegrade>
+      </div>
+
+      <div class="sobreposicaoImagem">
+        <img src="assets/images/barbieCasa.svg" alt="" />
+      </div>
     </section>
+  </section>
 
-    <section class="depoimentos">
-        <h2>
-            Depoimentos
-        </h2>
+  <section class="cuidados">
+    <h3>Como cuidar?</h3>
+    <div class="linhaRosa grande"></div>
+    <div class="dicas">
+      <dica></dica>
+      <dica></dica>
+      <dica></dica>
+      <dica></dica>
+      <dica></dica>
+      <dica></dica>
+    </div>
+  </section>
 
-        <div class="linhaRosa">
+  <section class="depoimentos">
+    <h2>Depoimentos</h2>
 
-        </div>
-        <div class="cards">
-            
-            <app-card-depoimento></app-card-depoimento>
-            <app-card-depoimento></app-card-depoimento>
-            <app-card-depoimento></app-card-depoimento>
-            <app-card-depoimento></app-card-depoimento>
-            <app-card-depoimento></app-card-depoimento>
-        </div>
-    </section>
+    <div class="linhaRosa"></div>
+    <div class="cards">
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+    </div>
+  </section>
 
-    <footer>
+  <footer>
     <div class="footer-container">
-        <div class="footer-col">
-            <img class="logo-footer" src="assets/images/logo.svg" alt="Logo Doll House">
-            <p>A sua loja favorita para encontrar as bonecas mais incríveis e exclusivas. Colecione sonhos!</p>
-            <div class="redes-sociais">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
+      <div class="footer-col">
+        <img
+          class="logo-footer"
+          src="assets/images/logo.svg"
+          alt="Logo Doll House"
+        />
+        <p>
+          A sua loja favorita para encontrar as bonecas mais incríveis e
+          exclusivas. Colecione sonhos!
+        </p>
+        <div class="redes-sociais">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
         </div>
+      </div>
 
-        <div class="footer-col">
-            <h4>Institucional</h4>
-            <ul>
-                <li><a routerLink="/sobre">Quem somos</a></li>
-                <li><a routerLink="/politica-privacidade">Política de Privacidade</a></li>
-                <li><a routerLink="/trocas">Trocas e Devoluções</a></li>
-                <li><a routerLink="/contato">Fale Conosco</a></li>
-            </ul>
-        </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a routerLink="/sobre">Quem somos</a></li>
+          <li>
+            <a routerLink="/politica-privacidade">Política de Privacidade</a>
+          </li>
+          <li><a routerLink="/trocas">Trocas e Devoluções</a></li>
+          <li><a routerLink="/contato">Fale Conosco</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-            <h4>Pagamento</h4>
-            <div class="pagamentos">
-                <i class="fa-brands fa-cc-visa" title="Visa"></i>
-                <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
-                <i class="fa-solid fa-barcode" title="Boleto"></i>
-                <i class="fa-brands fa-pix" title="Pix"></i>
-            </div>
+      <div class="footer-col">
+        <h4>Pagamento</h4>
+        <div class="pagamentos">
+          <i class="fa-brands fa-cc-visa" title="Visa"></i>
+          <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fa-solid fa-barcode" title="Boleto"></i>
+          <i class="fa-brands fa-pix" title="Pix"></i>
         </div>
+      </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2025 Doll House. Todos os direitos reservados.</p>
-        <p>Desenvolvido com <i class="fa-solid fa-heart" style="color: #ff007f;"></i> por Débora.</p>
+      <p>&copy; 2025 Doll House. Todos os direitos reservados.</p>
+      <p>
+        Desenvolvido com
+        <i class="fa-solid fa-heart" style="color: #ff007f"></i> por Débora.
+      </p>
     </div>
-</footer>
-
+  </footer>
 </main>

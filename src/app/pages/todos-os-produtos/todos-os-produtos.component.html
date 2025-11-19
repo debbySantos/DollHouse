@@ -1,1 +1,58 @@
-<p>todos-os-produtos works!</p>
+<main>
+   <app-header></app-header>
+
+    <section class="titulo-pagina">
+        <h1>Nossa Coleção Completa</h1>
+        <p>Explore o mundo mágico e encontre sua próxima boneca favorita.</p>
+        <div class="linhaRosa grande"></div>
+    </section>
+
+    <div class="conteudo-loja">
+
+        <!-- GRADE DE PRODUTOS -->
+        <section class="grade-produtos">
+
+            <!-- LOADING -->
+            <div *ngIf="carregando" style="text-align: center; padding: 40px; color: #E75480;">
+                <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+                <p>Carregando bonecas...</p>
+            </div>
+
+            <!-- GRID COM O SEU COMPONENT -->
+            <div class="grid" *ngIf="!carregando">
+
+                <!--
+                   AQUI ESTÁ A MÁGICA:
+                   Usamos o seletor 'bonecaCard' (igual da Home).
+                   O [dados]="item" envia as informações da boneca para dentro do card.
+                -->
+                <bonecaCard *ngFor="let item of listaProdutos" [dados]="item"></bonecaCard>
+
+                <div *ngIf="listaProdutos.length === 0" style="grid-column: 1/-1; text-align: center; color: #777;">
+                    Nenhum produto encontrado.
+                </div>
+            </div>
+
+    
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <img class="logo-footer" src="assets/images/logo.svg" alt="Logo Doll House" style="width: 120px;">
+                <p>Colecionando sonhos e momentos mágicos.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Doll House.</p>
+        </div>
+    </footer>
+</main>

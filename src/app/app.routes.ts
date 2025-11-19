@@ -6,6 +6,7 @@ import { GerenciamentoEstoqueComponent } from './pages/gerenciamento-estoque/ger
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PagInicialAdmComponent } from './pages/pagina-inicial-adm/pagina-inicial.component';
 import { EsqueciMinhaSenhaComponent } from './pages/login/EsqueciMinhaSenha.component';
+import { TodosOsProdutosComponent } from './pages/todos-os-produtos/todos-os-produtos.component';
 
 export const routes: Routes = [
     {
@@ -29,10 +30,10 @@ export const routes: Routes = [
         title: 'Cadastrar Produto'
     },
     {
-        path: 'gerenciamentoEstoque', 
+        path: 'gerenciamentoEstoque',
         component: GerenciamentoEstoqueComponent,
         title: 'Gerenciamento de estoque'
-    }, 
+    },
     {
         path: 'cadastro',
         component: CadastroComponent,
@@ -49,10 +50,15 @@ export const routes: Routes = [
         title: 'alterarBoneca'
     },
     {
-        path: 'esqueci-senha', 
-        component: EsqueciMinhaSenhaComponent, 
-        title: 'Esqueci minha senha' 
+        path: 'esqueci-senha',
+        component: EsqueciMinhaSenhaComponent,
+        title: 'Esqueci minha senha'
 
     },
-    
+    {
+      path: 'todosOsProdutos',
+      component: TodosOsProdutosComponent,
+      title: 'Todos os produtos'
+    }
+
 ];

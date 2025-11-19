@@ -1,0 +1,101 @@
+/* --- GERAL --- */
+main {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5e6ff91;
+    min-height: 100vh;
+    color: #3A3A3A;
+}
+
+/* --- TÍTULO --- */
+.titulo-pagina {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.titulo-pagina h1 {
+    color: #E75480;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.titulo-pagina p {
+    color: #777;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.linhaRosa {
+    background-color: #FFC3D3;
+    border-radius: 10px;
+    height: 4px;
+    width: 100px;
+    margin: 15px auto 0;
+}
+
+/* --- CONTEUDO PRINCIPAL --- */
+.conteudo-loja {
+    /* Removemos o display: flex que segurava a sidebar */
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+}
+
+/* --- GRID DE PRODUTOS (Simplificado e Ajustado) --- */
+.grid {
+    display: grid;
+
+    /* Lógica para garantir pelo menos 3 cards no Desktop:
+       - minmax(300px, 1fr): Cada card tenta ter pelo menos 300px.
+       - Em uma tela padrão (1280px), cabem confortavelmente 3 ou 4 cards.
+    */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    /* Espaçamento generoso para não ficarem grudados */
+    gap: 40px;
+    row-gap: 50px;
+
+    justify-items: center;
+    padding-bottom: 40px;
+}
+
+/* --- FOOTER BÁSICO --- */
+footer {
+    background-color: #FFF0F5;
+    padding: 40px 20px;
+    border-top: 4px solid #E75480;
+    margin-top: 40px;
+    font-family: "Montserrat";
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza o footer também */
+}
+
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li a { text-decoration: none; color: #555; line-height: 2; }
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-size: 12px;
+    border-top: 1px solid #ffc3d3;
+    padding-top: 20px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    /* No celular, diminui o tamanho mínimo para caberem melhor */
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 32px;
+    }
+}
