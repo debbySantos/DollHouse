@@ -33,31 +33,29 @@ contato via Instagram."
     <section class="bonecas">
       <h2>As Mais Vendidas!</h2>
       <div class="linhaRosa"></div>
+
       <div class="cardBonecas">
-        <bonecaCard></bonecaCard>
-        <bonecaCard></bonecaCard>
-        <bonecaCard></bonecaCard>
-        <bonecaCard></bonecaCard>
+        <bonecaCard *ngFor="let item of listaMaisVendidas" [dados]="item"></bonecaCard>
+
+        <p *ngIf="listaMaisVendidas.length === 0" style="text-align:center; width:100%">Carregando destaques...</p>
       </div>
     </section>
   </section>
+
 
   <section id="lancamentos">
     <section class="lancamentos">
       <h2>Lançamentos</h2>
       <div class="linhaRosa"></div>
+
       <div class="cardBonecas">
-        <bonecaCard></bonecaCard>
-        <bonecaCard></bonecaCard>
-        <bonecaCard></bonecaCard>
-        <bonecaCard></bonecaCard>
+        <bonecaCard *ngFor="let item of listaLancamentos" [dados]="item"></bonecaCard>
       </div>
 
       <botaoDegrade
         textoBotao="Ver Todos os Produtos"
         routerLink="todosOsProdutos"
       ></botaoDegrade>
-<a routerLink="todosOsProdutos">aaaa</a>
     </section>
   </section>
 

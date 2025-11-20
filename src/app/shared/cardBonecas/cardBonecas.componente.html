@@ -1,5 +1,5 @@
 <div class="cardBoneca" *ngIf="dados">
-    <img [src]="imgBoneca" alt="foto da Barbie">
+    <img [src]="dados.foto" alt="foto da Barbie">
     <span>{{dados.nome}}</span>
     <p>R${{dados.preco}}</p>
     <div class="valores">

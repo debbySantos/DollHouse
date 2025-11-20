@@ -16,6 +16,11 @@
     text-align: center;
     line-height: normal;
 
+    img {
+      max-width: 105px;
+      align-self: center;
+      margin-bottom: 5px;
+    }
 
     .valores {
         display: flex;

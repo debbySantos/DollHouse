@@ -1,2 +1,20 @@
-import { TestBed } from "@angular/core/testing";
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing'; 
 
+import { CadastroUsuarioService } from './cadastro-usuario.service';
+
+describe('CadastroUsuarioService', () => {
+  let service: CadastroUsuarioService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [CadastroUsuarioService]
+    });
+    service = TestBed.inject(CadastroUsuarioService);
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});

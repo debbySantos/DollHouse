@@ -24,3 +24,8 @@ export interface Usuarios {
       cidade: string,
       estado: string
 }
+
+export interface LoginResponse {
+    token: string;
+    usuario: Usuarios;
+}
