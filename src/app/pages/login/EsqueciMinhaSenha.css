@@ -1,99 +1,105 @@
-/* --- FUNDO DA PÁGINA --- */
 .forgot-password-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #f5e6ff91; /* igual ao fundo da tela de login */
-  font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5e6ff91;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
 }
 
-/* --- CARD PRINCIPAL --- */
 .forgot-password-box {
-  background-color: #FADADD; /* mesmo tom do card externo do login */
-  padding: 60px 50px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(243, 139, 139, 0.5);
-  border: 3px solid #f7bbc4;
-  text-align: center;
-  width: 420px;
-  max-width: 90%;
-  box-sizing: border-box;
+    background-color: #FADADD;
+    padding: 60px 50px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(243, 139, 139, 0.5);
+    border: 3px solid #f7bbc4;
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
 }
 
-/* --- TÍTULO E TEXTO --- */
 .forgot-password-box h2 {
-  color: #E75480;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 15px;
+    color: #E75480;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .forgot-password-box p {
-  color: #7a4a67;
-  font-size: 0.95rem;
-  margin-bottom: 25px;
+    color: #7a4a67;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
 }
 
-/* --- INPUT DE E-MAIL --- */
 .forgot-password-box input {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 2px solid #ffc0cb;
-  background: #fff;
-  outline: none;
-  font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #ffc0cb;
+    background: #fff;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
 }
 
 .forgot-password-box input:focus {
-  border-color: #f88fc4;
-  box-shadow: 0 0 8px rgba(232, 122, 150, 0.4);
+    border-color: #f88fc4;
+    box-shadow: 0 0 8px rgba(232, 122, 150, 0.4);
 }
 
-/* --- BOTÃO ENVIAR LINK --- */
 .btn-recuperar {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  background-color: #E75480;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 10px rgba(255, 105, 180, 0.4);
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background-color: #E75480;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(255, 105, 180, 0.4);
 }
 
 .btn-recuperar:hover {
-  background-color: #fc3470;
-  transform: translateY(-2px);
+    background-color: #fc3470;
+    transform: translateY(-2px);
 }
 
-/* --- LINK VOLTAR AO LOGIN --- */
 .link-voltar {
-  margin-top: 25px;
+    margin-top: 25px;
 }
 
 .link-voltar a {
-  color: #E75480;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.2s;
+    color: #E75480;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .link-voltar a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* --- MENSAGEM DE FEEDBACK --- */
 .mensagem {
-  margin-top: 15px;
-  color: #E75480;
-  font-size: 0.9rem;
-  font-weight: 500;
+    margin-top: 15px;
+    color: #E75480;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .forgot-password-box {
+        padding: 40px 20px;
+    }
+
+    .forgot-password-box h2 {
+        font-size: 1.5rem;
+    }
 }

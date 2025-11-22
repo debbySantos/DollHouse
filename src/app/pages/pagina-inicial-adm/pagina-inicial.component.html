@@ -1,116 +1,118 @@
 <div class="body">
-
     <div class="container">
-        <!-- MENU LATERAL -->
+        
+        <app-menu-lateral-adm></app-menu-lateral-adm>
 
-        <app-menu-lateral-adm/>
-        <!-- CONTEÚDO PRINCIPAL -->
         <main class="main-content">
-            <h1>Bem-vindo, administrador(a)!</h1>
+            
+            <header class="page-header">
+                <div>
+                    <h1>Inventário de Produtos</h1>
+                    <p>Gerencie o estoque e o catálogo da loja.</p>
+                </div>
+                
+                <button class="btn-add" routerLink="/cadastro-prod">
+                    <i class="fa-solid fa-plus"></i> Novo Produto
+                </button>
+            </header>
 
-            <!-- CARDS -->
-            <div class="cards">
-                <div class="card">
-                    <span>❤️</span>
-                    <h2>42</h2>
-                    <p>Bonecas</p>
+            <div class="cards-overview">
+                <div class="card-kpi">
+                    <div class="icon-box pink">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <div class="info">
+                        <h3>1.240</h3>
+                        <p>Total de Itens</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <span>🛒</span>
-                    <h2>7</h2>
-                    <p>Pedidos</p>
+
+                <div class="card-kpi">
+                    <div class="icon-box orange">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="info">
+                        <h3>5</h3>
+                        <p>Baixo Estoque</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <span>💲</span>
-                    <h2>R$ 7.534</h2>
-                    <p>Receita</p>
+
+                <div class="card-kpi">
+                    <div class="icon-box green">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <div class="info">
+                        <h3>R$ 42.5k</h3>
+                        <p>Valor em Estoque</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- TABELA -->
-            <section class="table-section">
-                <h3>Últimas vendas</h3>
+            <div class="toolbar">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Buscar por nome, SKU ou categoria...">
+                </div>
+                <div class="filters">
+                    <select>
+                        <option>Todas as Categorias</option>
+                        <option>Sereias</option>
+                        <option>Fashion</option>
+                        <option>Colecionáveis</option>
+                    </select>
+                    <select>
+                        <option>Status: Todos</option>
+                        <option>Em Estoque</option>
+                        <option>Esgotado</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="inventory-table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Foto</th>
-                            <th>Nome</th>
+                            <th>Produto</th>
+                            <th>SKU</th>
                             <th>Categoria</th>
                             <th>Preço</th>
-                            <th>Estoque</th>
-                            <th>Quantidade</th>
+                            <th>Nível de Estoque</th>
                             <th>Status</th>
-                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><img src="https://i.ibb.co/8b3CwFm/avatar1.png" alt="Anna"></td>
-                            <td>Anna</td>
-                            <td>Edição limitada</td>
-                            <td>R$ 250</td>
-                            <td>12</td>
-                            <td><span class="status ativa">Ativa</span></td>
+                        <tr *ngFor="let item of produtos">
                             <td>
-                                <button class="edit">✏️</button>
-                                <button class="delete">🗑️</button>
+                                <div class="product-cell">
+                                    <img [src]="item.imagem" class="product-thumb" onerror="this.src='assets/images/sem-foto.png'">
+                                    <span class="product-name">{{ item.nome }}</span>
+                                </div>
                             </td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://i.ibb.co/9tX0fzd/avatar2.png" alt="Bella"></td>
-                            <td>Bella</td>
-                            <td>Lançamento</td>
-                            <td>R$ 150</td>
-                            <td>8</td>
-                            <td><span class="status inativa">Inativa</span></td>
+                            <td class="text-muted">{{ item.sku }}</td>
+                            <td><span class="category-tag">{{ item.categoria }}</span></td>
+                            <td class="price">{{ item.preco | currency:'BRL' }}</td>
                             <td>
-                                <button class="edit">✏️</button>
-                                <button class="delete">🗑️</button>
+                                <div class="stock-level">
+                                    <span class="stock-number">{{ item.estoque }} un.</span>
+                                    <div class="progress-bar">
+                                        <div class="fill" 
+                                             [style.width.%]="item.estoque > 100 ? 100 : item.estoque"
+                                             [class]="item.status"></div>
+                                    </div>
+                                </div>
                             </td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://i.ibb.co/NFb5R90/avatar3.png" alt="Clara"></td>
-                            <td>Clara</td>
-                            <td>Edição limitada</td>
-                            <td>R$ 300</td>
-                            <td>5</td>
-                            <td><span class="status ativa">Ativa</span></td>
                             <td>
-                                <button class="edit">✏️</button>
-                                <button class="delete">🗑️</button>
+                                <span class="status-badge" [class]="item.status">
+                                    {{ item.status === 'em-estoque' ? 'Disponível' : 
+                                       item.status === 'baixo-estoque' ? 'Baixo' : 'Esgotado' }}
+                                </span>
                             </td>
+
                         </tr>
                     </tbody>
                 </table>
-            </section>
-
-            <div class="modal" id="modalAdd">
-                <div class="modal-content">
-                    <span class="close" id="closeModal">&times;</span>
-                    <h2>Adicionar nova boneca</h2>
-                    <form id="formAdd">
-                        <label>Nome:</label>
-                        <input type="text" id="nome" required>
-
-                        <label>Categoria:</label>
-                        <input type="text" id="categoria" required>
-
-                        <label>Preço (R$):</label>
-                        <input type="number" id="preco" required>
-
-                        <label>Estoque:</label>
-                        <input type="number" id="estoque" required>
-
-                        <label>Status:</label>
-                        <select id="status">
-                            <option value="ativa">Ativa</option>
-                            <option value="inativa">Inativa</option>
-                        </select>
-
-                        <button type="submit" class="btn-add">Salvar</button>
-                    </form>
-                </div>
             </div>
+
         </main>
     </div>
 </div>

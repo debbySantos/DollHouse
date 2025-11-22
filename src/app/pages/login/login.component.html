@@ -17,7 +17,7 @@
                 <form [formGroup]="formulario" (ngSubmit)="onBotaoClicado()">
 
                     <div class="input-group">
-                        <input type="text" id="username" formControlName="email" placeholder="Nome de Usuário">
+                        <input type="text" id="username" formControlName="email" placeholder="Email do Usuário">
                     </div>
                     <small *ngIf="formulario.get('email')?.invalid && formulario.get('email')?.touched" style="color: red; display: block; margin-top: 5px; font-size: 12px;">
                         Campo obrigatório.

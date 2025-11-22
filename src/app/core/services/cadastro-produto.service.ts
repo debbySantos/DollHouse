@@ -30,20 +30,4 @@ export class CadastroProdutoService {
   deletarBoneca(id:number): Observable<Bonecas>{
     return this.http.delete<Bonecas>(this.API + `/${id}`)
   }
-
-//   constructor() { }
-
-//    listar(): Bonecas[] {
-//     return [
-//       {
-//         id: 1,
-//         foto: "https://m.media-amazon.com/images/I/71LapqEOkmL._AC_SL1500_.jpg",
-//         nome: "Marcia Josefina",
-//         categoria: "Preta",
-//         preco: 999.99,
-//         estoque: true,
-//         status: 1
-//       }
-//     ]
-// }
 }

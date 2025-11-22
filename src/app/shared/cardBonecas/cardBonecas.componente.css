@@ -15,9 +15,12 @@
 
     text-align: center;
     line-height: normal;
+    justify-content: center;
+    gap: 15px;
 
     img {
-      max-width: 105px;
+      width: 150px;
+      max-width: 300px;
       align-self: center;
       margin-bottom: 5px;
     }
@@ -44,4 +47,12 @@
         color: #FFF;
     }
 
+
+    @media (max-width: 480px) {
+    .cardBoneca {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+    }
+}
 }

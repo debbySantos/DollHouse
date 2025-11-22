@@ -1,18 +1,15 @@
-/* --- FUNDO DA PÁGINA --- */
 .login {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    /* BACKGROUND DO CADASTRO: lilás/rosa pálido */
     background: #f5e6ff91; 
     display: flex; 
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* --- Estilização do Cabeçalho --- */
 .main-header {
-    background-color: #e57398; /* Rosa escuro do topo */
+    background-color: #e57398;
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
@@ -39,44 +36,32 @@
     text-decoration: underline;
 }
 
-/* --- CENTRALIZAÇÃO --- */
 .container {
     flex-grow: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px; 
+    padding: 40px;
+    box-sizing: border-box;
 }
 
-/* --- 1. CARD EXTERNO (.card) --- */
 .card {
-    /* COR EXTERNA: Rosa claro (Padrão do Cadastro) */
     background-color: #FADADD; 
-    
-    /* Configuração de tamanho e espaçamento */
-    width: 500px; /* Largura para o card externo */
-    padding: 70px; /* Espaço entre a borda externa e o login-box */
+    width: 100%;
+    max-width: 500px;
+    padding: 70px;
     border-radius: 30px;
-    
-    /* Sombras e Borda do Cadastro */
     box-shadow: 0 10px 30px rgba(243, 139, 139, 0.5);
     border: 3px solid #f7bbc4; 
-    
-    /* Garante que o login-box fique centralizado dentro dele */
     display: flex; 
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    max-width: 90%;
 }
 
-/* --- 2. CAIXA DE LOGIN INTERNA (.login-box) --- */
 .login-box { 
-    /* COR INTERNA: Rosa mais forte (O que estava aparecendo na sua imagem) */
     background-color: #fac1c7; 
-    
-    /* A largura é dada pelo card externo, mas definimos o máximo para o conteúdo */
-    width: 100%; /* Ocupa 100% da área de conteúdo do .card */
+    width: 100%;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(255, 192, 203, 0.4); 
@@ -84,12 +69,10 @@
     box-sizing: border-box;
 }
 
-/* Oculta logo interna (se você estiver usando uma no header) */
 .logo-login { 
     display: none; 
 }
 
-/* --- TÍTULO E ELEMENTOS INTERNOS (Consistência com Cadastro) --- */
 .login-title {
     color: #E75480; 
     margin-bottom: 25px;
@@ -102,7 +85,8 @@
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #ffc0cb;
@@ -119,7 +103,6 @@ input:focus {
     border-color: #f88fc4;
 }
 
-/* --- BOTÃO ENTRAR --- */
 .btn-entrar {
     width: 100%;
     background-color:#E75480; 
@@ -139,7 +122,6 @@ input:focus {
     background-color: #fc3470;
 }
 
-/* --- LINKS ADICIONAIS --- */
 .extra-links {
     margin-top: 20px;
     font-size: 0.9rem; 
@@ -147,6 +129,7 @@ input:focus {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .extra-links a {
@@ -166,4 +149,27 @@ input:focus {
     height: 15px;
     background-color: #E75480;
     margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .card {
+        padding: 30px;
+        width: 100%;
+    }
+
+    .login-box {
+        padding: 20px;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
 }

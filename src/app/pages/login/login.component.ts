@@ -7,7 +7,6 @@ import { CadastroUsuarioService } from '../../core/services/cadastro-usuario.ser
 @Component({
   selector: 'app-login',
   standalone: true,
-  // Importante: Adicione ReactiveFormsModule e CommonModule
   imports: [RouterModule, ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'

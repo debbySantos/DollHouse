@@ -34,7 +34,6 @@ export class CadastroUsuarioService {
   }
 
   login(email: string, senha: string): Observable<Usuarios[]> {
-    // O JSON Server permite filtrar usando ?campo=valor&campo2=valor2
     return this.http.get<Usuarios[]>(`${this.API}?email=${email}&senha=${senha}`);
   }
 
