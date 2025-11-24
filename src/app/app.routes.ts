@@ -7,6 +7,8 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PagInicialAdmComponent } from './pages/pagina-inicial-adm/pagina-inicial.component';
 import { EsqueciMinhaSenhaComponent } from './pages/login/EsqueciMinhaSenha.component';
 import { TodosOsProdutosComponent } from './pages/todos-os-produtos/todos-os-produtos.component';
+import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
+
 
 export const routes: Routes = [
     {
@@ -59,6 +61,13 @@ export const routes: Routes = [
       path: 'todosOsProdutos',
       component: TodosOsProdutosComponent,
       title: 'Todos os produtos'
-    }
+    },
+
+    { path: 'carrinho', 
+     component: CarrinhoComponent, 
+     title: 'Carrino de compra'
+    
+    },
+    
 
 ];

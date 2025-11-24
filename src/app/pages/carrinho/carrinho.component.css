@@ -1,0 +1,265 @@
+/* --- Variáveis de Cor (Tema Rosa) --- */
+:host {
+  --pink-primary: #ec5e87;   /* Cor principal */
+  --pink-hover: #d64a70;     /* Cor ao passar o mouse */
+  --pink-border: #f8cddf;    /* Bordas claras */
+  --text-dark: #333;
+  --bg-shipping: #f8f9fa;    /* Fundo do bloco de frete */
+}
+
+/* Reset Básico */
+* { box-sizing: border-box; }
+
+/* Container Principal */
+.main-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: var(--text-dark);
+}
+
+/* --- HEADER BAR (Topo) --- */
+.cart-header-bar {
+  background-color: var(--pink-primary);
+  color: white;
+  padding: 18px 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; /* Separa Esquerda e Direita */
+  align-items: center;
+}
+
+/* Lado Esquerdo do Header */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Botão Home (Estilo Ghost) */
+.btn-home {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-home:hover {
+  background-color: white;
+  color: var(--pink-primary);
+}
+
+/* --- CARD DO PRODUTO --- */
+.product-card-pink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--pink-border);
+  border-radius: 8px; /* Cantos arredondados suaves */
+  padding: 20px 30px;
+  margin-bottom: 25px;
+  background: #fff;
+}
+
+.prod-img img {
+  width: 70px;
+  height: auto;
+  display: block;
+}
+
+.prod-name h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.prod-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.btn-trash {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s;
+  padding: 5px;
+}
+.btn-trash:hover { color: var(--pink-primary); }
+
+/* --- CONTROLES DE QUANTIDADE --- */
+.qty-controls-pink {
+  display: flex;
+  align-items: center;
+}
+
+.qty-controls-pink button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--text-dark);
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.qty-controls-pink input {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border: 1px solid var(--pink-border);
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--text-dark);
+  outline: none;
+}
+
+/* --- SUBTOTAL --- */
+.subtotal-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 0;
+  color: var(--text-dark);
+}
+
+/* --- FRETE --- */
+.shipping-block {
+  background-color: var(--bg-shipping);
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+.shipping-block h4 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.shipping-inputs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.input-pink {
+  flex: 1;
+  max-width: 350px;
+  padding: 10px 15px;
+  border: 1px solid var(--pink-border);
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-pink:focus { border-color: var(--pink-primary); }
+
+.dont-know-cep {
+  color: var(--pink-primary);
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.freight-value {
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--text-dark);
+  text-align: right; /* Alinha o valor do frete à direita se quiser */
+}
+
+/* --- TOTAL E BOTÕES --- */
+.total-section {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.main-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.installments-pink {
+  color: var(--pink-primary);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.link-see-more {
+  display: block;
+  margin-top: 20px;
+  color: var(--pink-primary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ESTILO GERAL DOS BOTÕES ROSA */
+.btn-pink-solid {
+  background-color: var(--pink-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+.btn-pink-solid:hover { background-color: var(--pink-hover); }
+
+.btn-pink-solid.small {
+  padding: 0 30px;
+  height: 42px; /* Altura do input */
+}
+
+.btn-pink-solid.large {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .product-card-pink {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .shipping-inputs { flex-direction: column; }
+  .input-pink, .btn-pink-solid.small { width: 100%; max-width: 100%; }
+  .btn-pink-solid.large { max-width: 100%; }
+}
