@@ -1,6 +1,5 @@
-{   "bonecas": [
- 
-  ],
+{
+  "bonecas": [],
   "usuarios": [
     {
       "id": "f076",
@@ -14,6 +13,21 @@
       "numero": "239",
       "complemento": "casa",
       "bairro": "Balneário São José",
+      "cidade": "São Paulo",
+      "estado": "SP"
+    },
+    {
+      "id": "3845",
+      "nome": "KAYK MATHEUS DE SIQUEIRA LIMA",
+      "email": "kayk@gmail.com",
+      "telefone": "11983963167",
+      "senha": "123456",
+      "foto": "assets/images/user-placeholder.png",
+      "cep": "05816-160",
+      "logradouro": "Rua Inácio País",
+      "numero": "70",
+      "complemento": "casa",
+      "bairro": "Recanto Santo Antônio",
       "cidade": "São Paulo",
       "estado": "SP"
     }

@@ -1,11 +1,15 @@
 <div class="cardBoneca" *ngIf="dados">
     <img [src]="dados.foto" alt="foto da Barbie">
+
     <span>{{dados.nome}}</span>
-    <p>R${{dados.preco}}</p>
+
+    <p>{{ dados.preco | currency:'BRL' }}</p>
+
     <div class="valores">
         <i class="fa fa-credit-card" aria-hidden="true"></i>
-        <p>3X de R$85,00 sem juros</p>
+
+        <p>3X de {{ (dados.preco / 3) | currency:'BRL' }} sem juros</p>
     </div>
 
-   <button>Comprar</button>
+    <button (click)="comprarBoneca()">Comprar</button>
 </div>
