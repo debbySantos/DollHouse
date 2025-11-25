@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/",
+    "/areaAdm",
+    "/cadastrarProduto",
+    "/cadastro",
+    "/carrinho",
+    "/esqueci-senha",
+    "/gerenciamentoEstoque",
+    "/home",
+    "/login",
+    "/todosOsProdutos"
+  ]
+}
